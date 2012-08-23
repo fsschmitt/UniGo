@@ -1,0 +1,47 @@
+<div id="login-top">
+  <div id="login-container">
+
+    <h2>Registar</h2>
+
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email %></div>
+
+      <div><%= f.label :nome %><br />
+      <%= f.text_field :name %></div>
+
+      <div><%= f.label :password %><br />
+      <%= f.password_field :password %></div>
+
+      <div><%= f.label :confirmação_da_password %><br />
+      <%= f.password_field :password_confirmation %></div>
+
+      <div><%= f.submit "Registar" %></div>
+    <% end %>
+
+    <%= render :partial => "devise/shared/links" %>
+  </div>  
+</div>
+
+<div id="login-top-container">
+  <div id="login-top-container-pic">
+    <img src="<%= asset_path('logo-top.png') %>">
+  </div>
+</div>
+<div id="login-bottom">
+  <div id="login-bottom-container">
+    <img src="<%= asset_path('logo-bottom.png') %>">
+  </div>
+</div>
+
+
+<style>
+  html, body{
+    background-color: #00557c;
+    min-height:100%;
+  }
+
+
+</style>

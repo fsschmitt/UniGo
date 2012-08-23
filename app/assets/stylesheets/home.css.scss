@@ -1,0 +1,128 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,body{
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	background-color: #00557c;
+}
+
+div#top{
+	width:100%;
+	background-color: #008aca;
+	height: 160px;
+	color:white;
+}
+
+div#top-content{
+	height:160px;
+	width:980px;
+	background-color: #008aca;
+	margin: 0 auto;
+}
+
+img#logo{
+	display: inline;
+	position: relative;
+	z-index: 1;
+	float:left;
+	height:160px;
+	width:410px;
+}
+
+div#search-stuff{
+	position:absolute;
+	padding-top: 80px;
+	padding-left:320px;
+	width:900px;
+}
+
+div#search-stuff > input{
+	position: relative;
+	display: inline;
+	z-index: 5;
+	width:350px;
+}
+
+div#search-stuff > a{
+	position:absolute;
+	display: inline;
+	width:120px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	top:78px;
+	left:670px;
+}
+
+div#sign_in{
+	float:right;
+	padding-top: 78px;
+}
+
+div#greetings{
+	display: inline;
+	position: relative;
+	top:-20px;
+	left:96px;
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 1.3em;
+}
+
+div#greetings > a{
+	color:#A0D8F2;
+}
+
+div#greetings > a:hover{
+	color:#00557c;
+}
+
+div#sub-top{
+	width:980px;
+	background-color: #00557c;
+	margin: 0 auto;
+}
+
+div#sub-top > a > img{
+	width:410px;
+	height:86px;
+}
+
+div#info{
+	padding-top:120px;
+	color:white;
+	background-color: #00557c;
+	min-height: 500px;
+}
+
+div#info-content{
+	min-height: 500px;
+	width:980px;
+	background-color: #00557c;
+	margin: 0 auto;
+}
+
+div.image-border{
+	height: 180px;
+	margin-left: 10%;
+	width:80%;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: #008aca;
+}
+
+img.house{
+	margin-top:15px;
+	margin-left:15px;
+	height:150px;
+}
+
+div.row{
+	margin-bottom: 25px;
+}
+
+a.more{
+	float:right;
+	margin-right:10%;
+}

@@ -1,0 +1,66 @@
+<div id="top">
+	<div id="top-content">
+		<a href=<%= url_for(:root) %> ><img id="logo" src="<%= asset_path('logo-top.png') %>"></a>
+		<div id="search-stuff">
+		    <input type="text" /> 
+			<a href="#" class="button">Procurar</a>
+		</div>
+		<div id="sign_in">
+			<% if user_signed_in?  %>
+				<a href=<%= destroy_user_session_path %> data-method="delete" rel="nofollow" class="log_btn secondary button"> Sair </a>
+				<div id="greetings"><a href="/users/edit"> <%=current_user.name%> </a></div>
+			<%else%>
+				<a href="/users/sign_in" class="log_btn secondary button">Sign In</a>
+			<% end %>
+		</div>
+	</div>
+	<div id="sub-top">
+		<a href=<%= url_for(:root) %> ><img src="<%= asset_path('logo-bottom.png') %>"></a>
+	</div>
+</div>
+
+<div id="info">
+	<div id="info-content">
+		<div class="row">
+		  <div class="four columns">
+		  	<div class="image-border">
+		  		<img class="house" src="<%= asset_path('house.png') %>">
+		  	</div>
+		  </div>
+		  <div class="four columns">
+		    <div class="image-border">
+		    	<img class="house" src="<%= asset_path('house.png') %>">
+		  	</div>
+		  </div>
+		  <div class="four columns">
+		    <div class="image-border">
+		    	<img class="house" src="<%= asset_path('house.png') %>">
+		  	</div>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="four columns">
+		  	<div class="image-border">
+		  		<img class="house" src="<%= asset_path('house.png') %>">
+		  	</div>
+		  </div>
+		  <div class="four columns">
+		    <div class="image-border">
+		    	<img class="house" src="<%= asset_path('house.png') %>">
+		  	</div>
+		  </div>
+		  <div class="four columns">
+		    <div class="image-border">
+		    	<img class="house" src="<%= asset_path('house.png') %>">
+		  	</div>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="four columns offset-by-eight">
+		  		<a href="#" class="more white button">Mais</a>
+		  </div>
+		</div>
+	</div>
+</div>
+
+
