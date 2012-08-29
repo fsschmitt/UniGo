@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120813182754) do
+ActiveRecord::Schema.define(:version => 20120829144157) do
+
+  create_table "apartments", :force => true do |t|
+    t.string   "title"
+    t.string   "zone"
+    t.integer  "max_price"
+    t.integer  "min_price"
+    t.string   "ap_type"
+    t.text     "description"
+    t.boolean  "water"
+    t.boolean  "electricity"
+    t.boolean  "television"
+    t.boolean  "internet"
+    t.integer  "size"
+    t.string   "preference"
+    t.integer  "n_available"
+    t.integer  "creator"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "city"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

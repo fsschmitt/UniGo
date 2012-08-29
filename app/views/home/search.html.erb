@@ -1,0 +1,41 @@
+<%= render :partial => 'layouts/header' %>
+<div id="info">
+	<div id="info-content">
+<table id="table_results">
+	<% if !@results.empty? %>
+		<tr>
+			<td>
+				<h4>Foto</h4>
+			</td>
+			<td>
+				<h4>Titulo</h4>
+			</td>
+			<td>
+				<h4>Cidade</h4>
+			</td>
+		</tr>
+		<% for @result in @results %>
+			<tr id="result_<%= @result.id %>">
+				<td>
+					<img src="<%= @result.avatar.url(:thumb) %>" />
+				</td>
+				<td>
+					<a href="<%= request.protocol+request.host_with_port+"/apartments/"+@result.id.to_s %>">
+						<%= @result.title %>
+					</a>
+				</td>
+				<td>
+					<%= @result.city %>
+				</td>
+			</tr>
+		<% end %>
+	<% else %>
+		<tr>
+			<td colspan="3" style="text-align: center;">
+				Não existem resultados.
+			</td>
+		</tr>
+	<% end %>
+</table>
+</div>
+</div>

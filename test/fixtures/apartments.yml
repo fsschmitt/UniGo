@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  zone: MyString
+  max_price: 
+  min_price: 
+  type: 
+  description: MyText
+  water: false
+  electricity: false
+  television: false
+  internet: false
+  size: 
+  preference: MyString
+  n_available: 
+  creator: 
+
+two:
+  title: MyString
+  zone: MyString
+  max_price: 
+  min_price: 
+  type: 
+  description: MyText
+  water: false
+  electricity: false
+  television: false
+  internet: false
+  size: 
+  preference: MyString
+  n_available: 
+  creator: 

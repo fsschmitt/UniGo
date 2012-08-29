@@ -1,0 +1,98 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+html, body{
+	margin:0;
+	padding: 0;
+	background-color: #00557c;
+	min-height:100%;
+}
+
+h2, b{
+	color:white;
+}
+
+table{
+	width:490px;
+}
+
+td > span{
+	text-align: center;
+	display:block;
+}
+
+td > b{
+	text-align: center;
+	display:block;
+	color:gray;
+}
+
+p{
+	color:#A0D8F2;
+}
+
+.left{
+	float:left;
+	margin-right: 50px;
+}
+
+div#tick-form{
+	width:480px;
+	height:60px;
+	margin: 0 auto;
+}
+
+div#ap_container{
+	margin-top:90px;
+	width:100%;
+	background-color: #00557c;
+}
+
+div#ap_details{
+	background-color: #00557c;
+	width:980px;
+	margin: 0 auto;
+}
+
+p#description{
+	width:490px;
+	overflow: scroll;
+}
+
+table#ap_pic_border{
+	position: relative;
+	float:right;
+	background-color: transparent;
+	border: none;
+	width:420px;
+}
+
+table#ap_pic_border > tbody > tr{
+	background-color: transparent;
+	height:420px;
+}
+
+td#ap_pic_td{
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: #008aca;
+	vertical-align:middle;
+}
+
+table#ap_pic_border > tbody > tr > td > a{
+	margin-top:20px;
+}
+
+table#ap_pic_border > tbody > tr > td > img{
+	position: relative;
+}
+
+div.field > label{
+	color:#A0D8F2;
+}
+
+select#apartment_ap_type{
+	height: 32px;
+}

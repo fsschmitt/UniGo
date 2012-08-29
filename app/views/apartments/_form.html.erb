@@ -1,0 +1,79 @@
+<%= form_for(@apartment) do |f| %>
+  <% if @apartment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
+
+      <ul>
+      <% @apartment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :título %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :zona %><br />
+    <%= f.text_field :zone %>
+  </div>
+  <div class="field">
+    <%= f.label :preço_máximo %><br />
+    <%= f.text_field :max_price %>
+  </div>
+  <div class="field">
+    <%= f.label :preço_mínimo %><br />
+    <%= f.text_field :min_price %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.select :ap_type, options_for_select(["T1", "T2", "T3", "T4", "T5"], @apartment.ap_type) %>
+  </div>
+  <div class="field">
+    <%= f.label :descrição %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div id="tick-form">
+    <div class="field left">
+      <%= f.label :agua %><br />
+      <%= f.check_box :water %>
+    </div>
+    <div class="field left">
+      <%= f.label :electricidade %><br />
+      <%= f.check_box :electricity %>
+    </div>
+    <div class="field left">
+      <%= f.label :televisão %><br />
+      <%= f.check_box :television %>
+    </div>
+    <div class="field left">
+      <%= f.label :internet %><br />
+      <%= f.check_box :internet %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :tamanho_m2 %><br />
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :preferência %><br />
+    <%= f.select :preference, options_for_select(["Sem preferência", "Masculino", "Feminino"], @apartment.preference) %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_de_quartos_disponíveis %><br />
+    <%= f.text_field :n_available %>
+  </div>
+  <div class="field">
+    <%= f.label :escolher_foto %><br />
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

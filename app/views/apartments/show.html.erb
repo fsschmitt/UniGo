@@ -1,0 +1,125 @@
+<%= render :partial => 'layouts/header' %>
+<div id="ap_container">
+
+<div id="ap_details">
+<table id="ap_pic_border">
+  <tr>
+    <td id="ap_pic_td">
+      <%= image_tag @apartment.avatar.url(:medium) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="mailto:<%= @creator.email %>?subject=[UniGo - Contacto] <%= @apartment.title %>&body=%0A%0A%0A%0A Apartamento: <%= request.protocol+request.host_with_port+request.fullpath %>" class="secondary button"> Contactar </a>
+    </td>
+  </tr>
+</table>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h2>
+    <%= @apartment.title %>
+  </h2>
+  <h4><%= @apartment.zone %></h4>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @apartment.city %>
+</p>
+
+<p>
+  <b>Preço:</b>
+  <%= @apartment.min_price %> - <%= @apartment.max_price %> €
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @apartment.ap_type %>
+</p>
+
+<p id="description">
+  <b>Descrição:</b>
+  <%= @apartment.description %>
+</p>
+
+<p>
+  <b>Incluído:</b>
+</p>
+<table>
+  <tr>
+    <td>
+      <b>Água</b>
+    </td>
+    <td>
+      <b>Electricidade</b>
+    </td>
+    <td>
+      <b>Televisão</b>
+    </td>
+    <td>
+      <b>Internet</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <% if @apartment.water?  %>
+      <span> Sim </span>
+    <% else %>
+      <span> Não </span>
+    <%end%>
+    </td>
+    <td>
+      <% if @apartment.electricity?  %>
+        <span> Sim </span>
+      <% else %>
+        <span> Não </span>
+      <%end%>
+    </td>
+    <td>
+      <% if @apartment.television?  %>
+        <span> Sim </span>
+      <% else %>
+        <span> Não </span>
+      <%end%>
+    </td>
+    <td>
+      <% if @apartment.internet?  %>
+        <span> Sim </span>
+      <% else %>
+        <span> Não </span>
+      <%end%>
+    </td>
+  </tr>
+</table>
+
+<p>
+  <b>Tamanho (m2):</b>
+  <%= @apartment.size %>
+</p>
+
+<p>
+  <b>Preferência:</b>
+  <%= @apartment.preference %>
+</p>
+
+<p>
+  <b>Número de quartos disponíveis:</b>
+  <%= @apartment.n_available %>
+</p>
+
+<p>
+  <b>Proprietário:</b>
+  <%= @creator.name %>
+</p>
+
+<%if !current_user.nil? && current_user.id == @creator.id %> 
+<%= link_to 'Edit', edit_apartment_path(@apartment) %> |
+<% end %>
+<%= link_to 'Back', apartments_path %>
+
+</div>
+
+</div>

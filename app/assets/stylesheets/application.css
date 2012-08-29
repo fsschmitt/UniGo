@@ -51,6 +51,12 @@ div.white > a{
 	float:right;
 }
 
+.adv_btn{
+	position: absolute;
+	top: 32px;
+	left: 20px;
+}
+
 /* -----------------------------------------
    Sign In
 ----------------------------------------- */

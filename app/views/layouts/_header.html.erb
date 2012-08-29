@@ -1,0 +1,23 @@
+<div id="top">
+  <div id="top-content">
+    <a href=<%= url_for(:root) %> ><img id="logo" src="<%= asset_path('logo-top.png') %>"></a>
+    <div id="search-stuff">
+      <form accept-charset="UTF-8" action="/home/search" method="get">
+        <input id="query" name="query" type="text" />
+        <input id="search" class="button" name="commit" type="submit" value="Procurar" />
+        <a class="adv_btn tiny success button"> Avançada </a>
+      </form>
+    </div>
+    <div id="sign_in">
+      <% if user_signed_in?  %>
+        <a href=<%= destroy_user_session_path %> data-method="delete" rel="nofollow" class="log_btn secondary button"> Sair </a>
+        <div id="greetings"><a href="/users/edit"> <%=current_user.name%> </a></div>
+      <%else%>
+        <a href="/users/sign_in" class="log_btn secondary button">Sign In</a>
+      <% end %>
+    </div>
+  </div>
+  <div id="sub-top">
+    <a href=<%= url_for(:root) %> ><img src="<%= asset_path('logo-bottom.png') %>"></a>
+  </div>
+</div>

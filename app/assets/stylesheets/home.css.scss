@@ -39,14 +39,14 @@ div#search-stuff{
 	width:900px;
 }
 
-div#search-stuff > input{
+input#query{
 	position: relative;
 	display: inline;
 	z-index: 5;
 	width:350px;
 }
 
-div#search-stuff > a{
+input#search{
 	position:absolute;
 	display: inline;
 	width:120px;
@@ -118,6 +118,36 @@ img.house{
 	height:150px;
 }
 
+div.layer-title{
+	top: 15px;
+	left: 58px;
+	padding: 5px 5px;
+}
+
+div.layer{
+	position:absolute;
+	display: block;
+	z-index: 3;
+	background: rgba(0, 0, 0, 0.5); 
+	font-size: 1.2em;
+}
+
+div.layer-type{
+	bottom: 15px;
+	left: 58px;
+	padding: 5px 20px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div.layer-price{
+	bottom: 15px;
+	right: 56px;
+	padding: 5px 20px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
 div.row{
 	margin-bottom: 25px;
 }
@@ -125,4 +155,8 @@ div.row{
 a.more{
 	float:right;
 	margin-right:10%;
+}
+
+table#table_results{
+	width: 100%;
 }
